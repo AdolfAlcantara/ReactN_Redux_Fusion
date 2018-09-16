@@ -1,10 +1,10 @@
-#React Native con Redux
+# React Native con Redux
 
 Redux es basicamente una herramienta para las aplicaciones de Javascript que nos permite manejar los estados de la misma en un solo lugar y asi poder manejar de manera mas facil los mismos, mostrando la informacion correspondiente segun las acciones.
 
 En la aplicacion desarrollada en este repositorio se realizo con React Native y una simple implementacion de Redux pero suficiente para comprender como funciona.
 
-##Lo esencial
+## Lo esencial
 
 Redux lo podemos dividir en cuatro partes esenciales de las cuales son los ejes de toda la logica de esta fabulosa herramienta:
 ..* Reduce, se encarga de modificar los estados a traves de acciones.
@@ -12,7 +12,7 @@ Redux lo podemos dividir en cuatro partes esenciales de las cuales son los ejes 
 ..* Dispatcher, es quien se encarga de enviar las acciones.
 ..* Actionss, las acciones no son mas que objetos con el atributo type que sirve como identificadorlo al ser recibido por el Reduce.
 
-###Reduce
+### Reduce
 Es una funcion. Al encargarse de modiciar el estado segun las acciones correspondientes, recibe el estado inicial como parametro, el cual debemos inicializar con anteioridad. Como podemos observar, ademas recibe como parametro una accion mediante la cual se decide como el state se vera afectado.
 
 En la aplicacion podemos ver su implementacion en el Archivo **App.js**
@@ -33,7 +33,7 @@ const reducer = (state = initialState,action) =>{
   return state
 }
 ```
-###Store
+### Store
 Store es el encargado de almacenar los estados pero para acceder a ellos necesita de una funcion reduce. Para crear un store es necesario importar la funcion `createStore`  de 'redux'. 
 En la aplicacion podemos ver su su implementacion en el archivo **App.js**
 
@@ -63,7 +63,7 @@ export default class App extends React.Component {
 }
 ```
 
-###Dispatcher y Actions
+### Dispatcher y Actions
 El dispatcer cumple la funcion de enviar las acciones desde cualquier archivo hasta nuestro store. Para que esto sea posible se hacen usos del comando `dispatch`. 
 
 Pero antes de poder enviar acciones a nuestro reducer es necesario mapear el estado que no es enviado desde la clase contenedora. Para ello creamos usaremos el comando `connect` de `react-redux` y una aplicacion que nos permita mapear el estado para este contenedor.

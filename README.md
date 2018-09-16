@@ -109,5 +109,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(Contador)
 y listo, asi es como tenemos nuestra aplicacion sencilla de React Native con Redux integrado.
 
 [Redux](http://www.gistia.com/beginners-guide-redux/)
-[React Native] (https://facebook.github.io/react-native/)
+[React Native](https://facebook.github.io/react-native/)
 
